@@ -8,17 +8,20 @@ One of the big hurdles for me was trying to integrate the custom Google Font int
 
 ## Installation
 
-Clone the repository and make sure that you have Node.js installed, as well as the dependencies for the index.js file (Inquirer v8.2.4).
+Requires Node.js to run. Clone the repository and install the dependencies for the application (Inquirer v8.2.4).
 
 ## Usage
 
-After cloning the repository and installing any dependencies ( `npm i` ):
+* Clone the repository
 
-Open Git Bash to the application's root folder and run `node index.js`
+* Open Git Bash to the application's root folder and install dependencies using  `npm i` 
 
-From there, answer the prompts that appear on the command line. 
+* Run `node index.js` to run the application
 
-After answering the prompts, a new SVG file will appear in the /lib/generated_SVGs foler. You can preview the SVG using Chrome or other web browsers.
+* Answer the prompts on the command line
+ 
+
+After answering the prompts, a new SVG file will appear in the `/lib/generated_SVGs` folder. You can preview the SVG using Chrome or other web browsers.
 
 Here's an example of what the input of "hey" would look like - 
 
