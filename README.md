@@ -37,9 +37,3 @@ https://www.w3schools.com/graphics/svg_intro.asp
 
 Thank you to FontSquirrel for providing a free Webfont Generator:
 https://www.fontsquirrel.com/tools/webfont-generator
-
-## Tests
-
-Tests performed for checking the functionality of constructing a new Shape object based on user input.
-
-Please find the test in the "shapes.test.js" file in under the "lib" folder
