@@ -22,9 +22,19 @@ const questions = [
 ];
 
 const createSVG = (text, textColor, fileName) => {
+    // defining custom variables for dynamic width sizing - the more characters someone enters, the wider the SVG will be
+    const length = text.length;
+    const width = 100 + ( length*50 );
+    const height = 200;
+    const xOffset = ( width*0.47 );
+    const yOffset = 125;
+
+    // helpful debug in the console
+    console.log(`length - ${length}\nwidth - ${width}\nheight - ${height}\nxOffset - ${xOffset}\nyOffset - ${yOffset}\n`);
     console.log(`Creating text '${text}' in ${textColor}`);
+
     let svg = `
-<svg version="1.1" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+<svg version="1.1" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
     <defs>
         <style>
         @font-face {
@@ -34,17 +44,16 @@ const createSVG = (text, textColor, fileName) => {
          url('jacquard24-regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-
 }
         </style>
     </defs>
 
-  <text x="150" y="125" font-size="100" font-family="jacquard_24regular" text-anchor="middle" fill='${textColor}'>${text}</text>
+  <text x="${xOffset}" y="${yOffset}" font-size="100" font-family="jacquard_24regular" text-anchor="middle" fill='${textColor}'>${text}</text>
 
 </svg>
     `;
     fs.writeFile(`./lib/generated_SVGs/${fileName}.svg`, svg, (err) =>
-        err ? console.error(err) : console.log('SVG Created!'));
+        err ? console.error(err) : console.log(`${fileName}.svg Created!`));
     return;
 }
 
